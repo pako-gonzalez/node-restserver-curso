@@ -50,7 +50,7 @@ app.post('/usuario', [verificaToken, verificaAdmin_Role], function(req, res) {
                 err
             });
         }
-        res.json({
+        res.status(201).json({
             ok: true,
             usuario: usuarioDB
         });
